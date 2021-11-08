@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&display=swap");
+
+/* 
+variable
+*/
+
+:root {
+  --primaryColor: #f15825;
+  --mainBlack: #222;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --darkGrey: #afafaf;
+  --mainTransition: all 0.3 linea;
+  --mainspacing: 0.2rem;
+}
+
+/* 
+Global Styles 
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fira", monospace;
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: capitalize;
+  letter-spacing: var(--mainspacing);
+  margin-bottom: 1.25rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+p {
+  font-weight: 300;
+  font-size: 0.7rem;
+  line-height: 2;
+}
+
+.btn {
+  display: inline-block;
+  border: 3px solid var(--primaryColor);
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+  color: var(--primaryColor);
+  margin: 3rem;
+  transition: var(--mainTransition);
+}
+
+.btn:hover {
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+}
+
+/* 
+Style nav 
+*/
+nav {
+  color: var(--primaryColor);
+  background-color: gray;
+}
+li {
+  font-size: 1.5rem;
+  list-style-type: none;
+  padding: 21px;
+}
+
+li a {
+  color: var(--primaryColor);
+}
+/* hero */
+
+.hero-header {
+  background: linear-gradient(rgba(241, 80, 37, 0.75), rgba(0, 0, 0, 0.75)),
+    url(./image/size-image-2.jpeg) no-repeat center/cover fixed;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: var(--mainWhite);
+}
+
+.hero-text {
+  max-width: 80%;
+  max-width: 560px;
+  font-size: 1rem;
+  letter-spacing: var(--mainSpacing);
+}
+
+@media screen and (max-width: 576px) {
+  ul {
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1rem;
+  }
+  .hero-header {
+    background: var(--primaryColor);
+  }
+}
+/* CARDS */
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  border: solid 1px gray;
+  margin: 3rem;
+  margin-bottom: 3rem;
+}
+
+.card-icon {
+  padding: 10px;
+  font-size: 1rem;
+  color: #f15825;
+}
+
+.footer-1 {
+  background-color: gray;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tiles Project */
+
+.container-2 {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1170px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 200px);
+  grid-template-areas:
+    "a a a b"
+    "a a a c"
+    "e e e e"
+    "f g g g"
+    "f h d i";
+}
+
+.tiles-1 {
+  grid-area: a;
+}
+.tiles-2 {
+  grid-area: b;
+}
+.tiles-3 {
+  grid-area: c;
+}
+.tiles-4 {
+  grid-area: d;
+}
+.tiles-5 {
+  grid-area: e;
+}
+.tiles-6 {
+  grid-area: f;
+}
+.tiles-7 {
+  grid-area: g;
+}
+.tiles-8 {
+  grid-area: h;
+}
+.tiles-9 {
+  grid-area: i;
+}
+
+img {
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .container-2 {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    column-gap: 2rem;
+    grid-template-areas:
+      "a b"
+      "c d"
+      "e f"
+      "g h"
+      "i 0";
+  }
+}
